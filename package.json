@@ -1,0 +1,30 @@
+{
+  "name": "nla",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@daypilot/daypilot-lite-react": "^3.19.0",
+    "@tanstack/react-table": "^8.10.7",
+    "app-router": "^0.0.8",
+    "axios": "^1.6.2",
+    "bootstrap": "^5.3.2",
+    "next": "14.0.1",
+    "react": "^18",
+    "react-apexcharts": "^1.4.1",
+    "react-bootstrap": "^2.9.1",
+    "react-data-table-component": "^7.5.4",
+    "react-dom": "^18",
+    "react-phone-number-input": "^3.3.7"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.0.1",
+    "postcss": "^8",
+    "tailwindcss": "^3.3.0"
+  }
+}
