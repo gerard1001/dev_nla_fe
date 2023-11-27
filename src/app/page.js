@@ -7,6 +7,7 @@ import Dash from "./components/Dash";
 import Page from "./login/page";
 import { AuthContext } from "./ContextAPI/Controller";
 import { useContext } from "react";
+import { Provider } from "react-redux";
 
 export default function Home() {
   const { user } = useContext(AuthContext);
