@@ -1,15 +1,15 @@
-'use client'
-import { Inter } from 'next/font/google'
-import './globals.css'
-import { AuthProvider } from './ContextAPI/Controller'
-import Layout from '@/components/Layout'
-import { Provider } from 'react-redux'
-import store from '@/redux/store'
+"use client";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import { AuthProvider } from "./ContextAPI/Controller";
+import Layout from "@/components/Layout";
+import { Provider } from "react-redux";
+import store from "@/redux/store";
+import { ToastContainer } from "react-toastify";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({ children }) {
-
   return (
     <html lang="en">
       <head>
@@ -21,9 +21,10 @@ export default function RootLayout({ children }) {
       </head>
       <body className={inter.className}>
         <div>
-          <Provider store={store} >
+          <Provider store={store}>
             <AuthProvider>
               <Layout>
+                <ToastContainer />
                 {children}
               </Layout>
             </AuthProvider>
@@ -31,5 +32,5 @@ export default function RootLayout({ children }) {
         </div>
       </body>
     </html>
-  )
+  );
 }

@@ -2,7 +2,7 @@ const { configureStore } = require("@reduxjs/toolkit");
 const { default: rootReducers } = require("./rootReducer");
 
 const store = configureStore({
-  reducer: rootReducers
-})
+  reducer: rootReducers,
+});
 
-export default store
+export default store;
