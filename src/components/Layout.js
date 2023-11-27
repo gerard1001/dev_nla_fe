@@ -1,13 +1,13 @@
-import React, { Fragment } from 'react'
-import Header from '../app/components/Header'
-import Nav from '../app/Dashboard/Nav'
-import { AuthContext } from '../app/ContextAPI/Controller'
-import { useContext } from 'react'
+import React, { Fragment } from "react";
+import Header from "../app/components/Header";
+import Nav from "../app/Dashboard/Nav";
+import { AuthContext } from "../app/ContextAPI/Controller";
+import { useContext } from "react";
 
 const Layout = ({ children }) => {
-  const { user } = useContext(AuthContext)
-  console.log(user)
-  console.log('Y-user', user)
+  const { user } = useContext(AuthContext);
+  console.log(user);
+  console.log("Y-user", user);
 
   return (
     <Fragment>
@@ -27,7 +27,7 @@ const Layout = ({ children }) => {
         </div>
       )}
     </Fragment>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;
