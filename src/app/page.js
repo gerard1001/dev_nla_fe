@@ -6,12 +6,20 @@ import Graph from "./components/Graph";
 import Dash from "./components/Dash";
 import Page from "./login/page";
 import { AuthContext } from "./ContextAPI/Controller";
-import { useContext } from "react";
-import { Provider } from "react-redux";
+import { useContext, useEffect } from "react";
+import { Provider, useDispatch } from "react-redux";
+import { getCases } from "@/redux/slices/cases.slice";
 
 export default function Home() {
+  const dispatch = useDispatch()
   const { user } = useContext(AuthContext);
   console.log("X-user", user);
+
+  useEffect(() => {
+    dispatch(getCases()).then(({ error, payload }) => {
+      console.log(error, payload)
+    })
+  }, [])
 
   return (
     <main className="">
